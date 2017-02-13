@@ -1,29 +1,28 @@
 //__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/
-//! @file   GameTitle.h
+//! @file   Player.h
 //!
 //! @brief  プレイ処理のヘッダーファイル
 //!
-//! @date   日付		2016/12/12
+//! @date   日付		2017/02/13
 //!
 //! @author 制作者名	sugiura
 //__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/
 
-#include "GameBase.h"
 #include "ObjectBase.h"
-#include "Player.h"
 
 #pragma once // 多重インクルードの防止
 
-class GamePlay : public GameBase
+class Player : public ObjectBase
 {
 private:
-	Player* m_player;
-	
+
 public:
-		GamePlay();
-		~GamePlay();
+		Player();
+		~Player();
 		
 		void Update();	//アップデート
 		void Render();	//レンダー
+
+		void keyMove();	//キーボードで移動
 };
 
